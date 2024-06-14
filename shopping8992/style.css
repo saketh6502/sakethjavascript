@@ -1,0 +1,32 @@
+body{
+    overflow-x: hidden;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main div{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    
+    
+}
+.main div:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.main input{
+    height: 20px;
+    width: 250px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="womens.html"><button>Back</button></a>
+    <div class="main">
+    <form action="">
+        <input type="number" placeholder="Enter Your Minimum Price Value" id="min">
+        <input type="number" placeholder="Enter Your Maximum Price Value" id="max">
+        <input type="button" value="filter" id="myfilter">
+
+    </form>
+</div>
+
+    <br>
+    <div class="main">
+    
+        <div>
+            <img src="wt1.jpg" width="350px" height="300px">
+            <h2>Levi's</h2>
+            <h4 class="box" data-value="500">Price - 500</h4>
+        </div>
+        <div>
+            <img src="wt2.jpg" width="350px" height="300px">
+            <h2>Zara</h2>
+            <h4 class="box" data-value="600">Price - 600</h4>
+        </div>
+        <div>
+            <img src="wt3.jpg" width="350px" height="300px" >
+            <h2>H&M</h2>
+            <h4 class="box" data-value="700">Price - 700</h4>
+        </div>
+
+    <br>
+    
+        <div>
+            <img src="wt4.jpg" width="350px" height="300px">
+            <h2>Allen Solly</h2>
+            <h4 class="box" data-value="800">Price - 800</h4>
+        </div>
+        <div>
+            <img src="wt5.jpg" width="350px" height="300px">
+            <h2>Peter England</h2>
+            <h4 class="box" data-value="900">Price - 900</h4>
+        </div>
+        <div>
+            <img src="wt6.jpg" width="350px" height="300px">
+            <h2>Wrangler</h2>
+            <h4 class="box" data-value="1000">Price - 1000</h4>
+        </div>
+   
+    <br>
+    
+        <div>
+            <img src="wt7.jpg" width="350px" height="300px">
+            <h2>Being Human</h2>
+            <h4 class="box" data-value="1100">Price - 1100</h4>
+        </div>
+        <div>
+            <img src="wt8.jpg" width="350px" height="300px">
+            <h2>Louis Philippe</h2>
+            <h4 class="box" data-value="1200">Price - 1200</h4>
+        </div>
+        <div>
+            <img src="wt9.jpg" width="350px" height="300px">
+            <h2>Tommy Hilfiger</h2>
+            <h4 class="box" data-value="1300">Price - 1300</h4>
+        </div>
+   
+    <br>
+    
+        <div>
+            <img src="wt10.jpg" width="350px" height="300px">
+            <h2>Roadster</h2>
+            <h4 class="box" data-value="1400">Price - 1400</h4>
+        </div>
+        <div>
+            <img src="wt11.jpg" width="350px" height="300px">
+            <h2>Jack & Jones</h2>
+            <h4 class="box" data-value="1500">Price - 1500</h4>
+        </div>
+        <div>
+            <img src="wt12.jpg" width="350px" height="300px">
+            <h2>Calvin Klein</h2>
+            <h4 class="box" data-value="1600">Price - 1600</h4>
+        </div>
+  
+    <br>
+   
+        <div>
+            <img src="wt13.jpg" width="350px" height="300px" >
+            <h2>Ray-Ban</h2>
+            <h4 class="box" data-value="1700">Price - 1700</h4>
+        </div>
+        <div>
+            <img src="wt14.jpg" width="350px" height="300px">
+            <h2>Flying Machine</h2>
+            <h4 class="box" data-value="1800">Price - 1800</h4>
+        </div>
+        <div>
+            <img src="wt15.jpg" width="350px" height="300px">
+            <h2>U.S. Polo Assn.</h2>
+            <h4 class="box" data-value="1900">Price - 1900</h4>
+        </div>
+   
+</div>
+
+    <script>
+        let subbtn= document.querySelector("#myfilter");
+        let datval= document.querySelectorAll(".box");
+        datval.forEach(function(item){
+            subbtn.addEventListener('click',function(){
+                let minamt=document.getElementById("min").value;
+                let maxamt=document.getElementById("max").value;
+                minpi=parseInt(minamt);
+                maxpi=parseInt(maxamt);
+                
+                document.querySelectorAll('.main > div').forEach(function(item) {
+                let dataitem=parseInt(item.querySelector('.box').getAttribute('data-value'));
+                if (dataitem>=minpi && dataitem<=maxpi){
+                    item.style.display="block";
+                }
+                else{
+                    item.style.display="none";
+                }
+            })
+
+
+
+            })
+        })
+    </script>
+        
+</body>
+</html>
